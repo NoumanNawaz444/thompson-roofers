@@ -1,20 +1,10 @@
 import Footer from "@/components/Footer";
-import HeroCarousel from "@/components/HeroCarousel";
-import Navbar from "@/components/Navbar";
-import Sectors from "@/components/Sectors";
-import VideoPlayer from "@/components/VideoPlayer";
-import Image from "next/image";
+import Home from "./home/page";
 
-export default function Home() {
+export default function App() {
   return (
     <main className="bg-white">
-      <div className="fixed top-0 left-0 z-50 w-full ">
-        <Navbar />
-      </div>
-      <HeroCarousel />
-      <VideoPlayer />
-      <Sectors />
-      <Footer />
+     <Home />
     </main>
   );
 }

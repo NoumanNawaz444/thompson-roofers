@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono , Anton_SC } from "next/font/google";
+import { Geist, Geist_Mono, Anton_SC } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import HeroCarousel from "@/components/HeroCarousel";
+import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
+import Contact from "@/components/Contact";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +35,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${antonSC.variable} ${antonSC.variable} antialiased`}
+        className={`${antonSC.variable} ${antonSC.variable} antialiased bg-white`}
       >
+        <Toaster />
+        <div className="fixed top-0 left-0 z-50 w-full ">
+          <Navbar />
+        </div>
+        <HeroCarousel />
+
         {children}
+        <Footer />
+
       </body>
     </html>
   );
